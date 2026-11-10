@@ -133,6 +133,29 @@
   .card .body{padding:20px 22px 24px}
   .card p{margin:8px 0 0;font-size:15px;color:var(--muted)}
 
+  /* case studies */
+  .yield{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-bottom:clamp(40px,6vw,64px)}
+  .yield .y{background:var(--card);padding:22px 22px 24px}
+  .yield .y b{display:block;font-family:var(--display);font-size:24px;font-weight:600;text-transform:uppercase;letter-spacing:.02em;margin-bottom:6px}
+  .yield .y span{font-size:15px;color:var(--muted)}
+  .yield .y.br{background:var(--green);color:#F2EEE2}
+  .yield .y.br span{color:#CFD6CC}
+  .case{padding-top:clamp(28px,4vw,40px);margin-top:clamp(28px,4vw,40px);border-top:1px solid var(--line)}
+  .case-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:clamp(16px,3vw,40px);margin-bottom:22px;align-items:start}
+  .case-head .num{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green-2);margin:0 0 8px}
+  .case-head p.desc{margin:0;font-size:16px;color:var(--muted)}
+  .case-media{display:grid;gap:18px;align-items:start}
+  .case-media.three{grid-template-columns:1.6fr 1fr}
+  .case-media.two{grid-template-columns:3.2fr 1fr}
+  .case-media .stack{display:grid;gap:18px}
+  .case-media figure{margin:0}
+  .case-media .frame{border-radius:6px;overflow:hidden}
+  .frame.v{aspect-ratio:9/16}
+  .case-media figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+  .more{margin-top:clamp(40px,6vw,64px)}
+  .more .proof{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  @media (max-width:760px){.yield{grid-template-columns:1fr}.case-head{grid-template-columns:1fr}.case-media.three,.case-media.two{grid-template-columns:1fr}.case-media figure.vert{max-width:300px}}
+
   /* questions */
   .qs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(22px,3vw,40px)}
   .qs h3{margin-bottom:14px;padding-bottom:12px;border-bottom:3px solid var(--sage)}
@@ -328,38 +351,76 @@
 </section>
 
 <!-- ============ PROOF ============ -->
-<section class="band">
+<section class="band" id="work">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow">Recent work</p>
-      <h2>Organizations, in their own words</h2>
-      <p class="lede" style="margin-top:18px">Starting with the Eastpoint Neighborhood Kickoff, plus spotlight and mission films for community organizations across Nashville.</p>
+      <p class="eyebrow">How one interview day works</p>
+      <h2>One interview. A whole library of content.</h2>
+      <p class="lede" style="margin-top:18px">We are intentional on interview day, because every conversation can become more than one video. B-roll from the field brings each one to life. From the same interviews, we can build:</p>
     </div>
-    <article class="card" style="margin-bottom:clamp(20px,3vw,30px)">
-      <div class="frame"><iframe src="https://galleries.vidflow.co/videos/on2qcce3" title="Creative Girls Rock x Eastpoint Neighborhood Kickoff" allowfullscreen loading="lazy"></iframe></div>
-      <div class="body"><h3>Creative Girls Rock x Eastpoint Neighborhood Kickoff</h3><p>The live mural at the Eastpoint kickoff. The same neighborhood, the same partners, and the energy this series is built to carry.</p></div>
+    <div class="yield">
+      <div class="y"><b>Vertical reels</b><span>40 to 60 seconds, made for the feed. The heart of this series.</span></div>
+      <div class="y"><b>Full interviews</b><span>Each partner's complete story, in their own words.</span></div>
+      <div class="y"><b>A series montage</b><span>Every organization together in one film, the way we built it for Gamechangers.</span></div>
+    </div>
+    <p class="eyebrow" style="margin:0">Three recent examples of that approach</p>
+
+    <article class="case">
+      <div class="case-head">
+        <div><p class="num">Case study 01</p><h3>Community Foundation of Middle Tennessee: Gamechangers</h3></div>
+        <p class="desc">Eight honorees, one interview location, one look. Every honoree sat down at the Community Foundation on the same two-camera setup, then we filmed each of them in their element. When schedules did not fit, we added a day. Those interviews became a full episode and a vertical for every honoree, plus the montage that opened the Gamechangers celebration.</p>
+      </div>
+      <div class="case-media three">
+        <div class="stack">
+          <figure><div class="frame"><iframe src="https://galleries.vidflow.co/videos/cqxt6m6f" title="Gamechangers series montage" allowfullscreen loading="lazy"></iframe></div><figcaption>Series montage, all eight honorees</figcaption></figure>
+          <figure><div class="frame"><iframe src="https://galleries.vidflow.co/videos/yram5ha1" title="Judge Stephanie Williams full interview" allowfullscreen loading="lazy"></iframe></div><figcaption>Judge Stephanie Williams, full interview</figcaption></figure>
+        </div>
+        <figure class="vert"><div class="frame v"><iframe src="https://galleries.vidflow.co/videos/sk9h6dbj" title="Judge Williams vertical" allowfullscreen loading="lazy"></iframe></div><figcaption>Judge Williams, vertical</figcaption></figure>
+      </div>
     </article>
-    <div class="proof">
-      <article class="card">
-        <div class="frame"><iframe src="https://galleries.vidflow.co/videos/gw6od2v6" title="Community Foundation of Middle Tennessee Gamechangers" allowfullscreen loading="lazy"></iframe></div>
-        <div class="body"><h3>CFMT Gamechangers</h3><p>A spotlight series for the Community Foundation of Middle Tennessee: one interview location for a uniform look, then out to catch each honoree in their element.</p></div>
-      </article>
-      <article class="card">
-        <div class="frame"><iframe src="https://galleries.vidflow.co/videos/64664e9b" title="Repped in Tech Mission Film" allowfullscreen loading="lazy"></iframe></div>
-        <div class="body"><h3>Repped in Tech</h3><p>A mission film that lets the organization explain what it does and why, in its own voice.</p></div>
-      </article>
-      <article class="card">
-        <div class="frame"><iframe src="https://galleries.vidflow.co/videos/ac833c27" title="Nashville Teacher Residency Mission Film" allowfullscreen loading="lazy"></iframe></div>
-        <div class="body"><h3>Nashville Teacher Residency</h3><p>The people behind the program, and the community they serve.</p></div>
-      </article>
-      <article class="card">
-        <div class="frame"><iframe src="https://galleries.vidflow.co/videos/uhn1bmht" title="Mount Zion Meals on Wheels" allowfullscreen loading="lazy"></iframe></div>
-        <div class="body"><h3>Mount Zion Meals on Wheels</h3><p>A community ministry filmed in its element, doing the work on the ground.</p></div>
-      </article>
-      <article class="card">
-        <div class="frame"><iframe src="https://galleries.vidflow.co/videos/q3a81016" title="Pinnacle Financial Partners client testimonial" allowfullscreen loading="lazy"></iframe></div>
-        <div class="body"><h3>Pinnacle Client Testimonial</h3><p>A short, vertical testimonial built for the feed, the same format as the partner reels.</p></div>
-      </article>
+
+    <article class="case">
+      <div class="case-head">
+        <div><p class="num">Case study 02</p><h3>Creative Girls Rock: Innovator Award honorees</h3></div>
+        <p class="desc">One honoree interview, built two ways: the full honoree film for the Creative Arts award, and a vertical cut from the same conversation for social.</p>
+      </div>
+      <div class="case-media two">
+        <figure><div class="frame"><iframe src="https://galleries.vidflow.co/videos/qu11aijy" title="Katie Delmez Creative Arts honoree film" allowfullscreen loading="lazy"></iframe></div><figcaption>Katie Delmez, Creative Arts honoree</figcaption></figure>
+        <figure class="vert"><div class="frame v"><iframe src="https://galleries.vidflow.co/videos/ne4qmi11" title="Katie Delmez vertical" allowfullscreen loading="lazy"></iframe></div><figcaption>Katie Delmez, vertical</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <div><p class="num">Case study 03</p><h3>Pinnacle Financial Partners: client testimonials</h3></div>
+        <p class="desc">Client testimonials from the same interview approach: a branded cut with Pinnacle's logo intro, and a vertical for the feed.</p>
+      </div>
+      <div class="case-media two">
+        <figure><div class="frame"><iframe src="https://galleries.vidflow.co/videos/v65ykq57" title="Matt Proctor Pinnacle testimonial" allowfullscreen loading="lazy"></iframe></div><figcaption>Matt Proctor, testimonial</figcaption></figure>
+        <figure class="vert"><div class="frame v"><iframe src="https://galleries.vidflow.co/videos/q3a81016" title="Bonnie H vertical testimonial" allowfullscreen loading="lazy"></iframe></div><figcaption>Bonnie H, vertical</figcaption></figure>
+      </div>
+    </article>
+
+    <div class="more">
+      <p class="eyebrow">More work</p>
+      <div class="proof">
+        <article class="card">
+          <div class="frame"><iframe src="https://galleries.vidflow.co/videos/on2qcce3" title="Creative Girls Rock x Eastpoint Neighborhood Kickoff" allowfullscreen loading="lazy"></iframe></div>
+          <div class="body"><h3>CGR x Eastpoint Neighborhood Kickoff</h3><p>The live mural at the Eastpoint kickoff. The same neighborhood and the same energy this series is built to carry.</p></div>
+        </article>
+        <article class="card">
+          <div class="frame"><iframe src="https://galleries.vidflow.co/videos/64664e9b" title="Repped in Tech Mission Film" allowfullscreen loading="lazy"></iframe></div>
+          <div class="body"><h3>Repped in Tech</h3><p>A mission film that lets the organization explain what it does and why, in its own voice.</p></div>
+        </article>
+        <article class="card">
+          <div class="frame"><iframe src="https://galleries.vidflow.co/videos/ac833c27" title="Nashville Teacher Residency Mission Film" allowfullscreen loading="lazy"></iframe></div>
+          <div class="body"><h3>Nashville Teacher Residency</h3><p>The people behind the program, and the community they serve.</p></div>
+        </article>
+        <article class="card">
+          <div class="frame"><iframe src="https://galleries.vidflow.co/videos/uhn1bmht" title="Mount Zion Meals on Wheels" allowfullscreen loading="lazy"></iframe></div>
+          <div class="body"><h3>Mount Zion Meals on Wheels</h3><p>A community ministry filmed in its element, doing the work on the ground.</p></div>
+        </article>
+      </div>
     </div>
   </div>
 </section>
