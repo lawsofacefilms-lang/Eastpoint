@@ -312,7 +312,7 @@
     <div class="head">
       <p class="eyebrow">Everything, itemized</p>
       <h2>Build exactly what you need</h2>
-      <p class="lede" style="margin-top:18px">Choose the production plan, then check the pieces you want. The total updates as you go. When it looks right, send it over and I will confirm and send the agreement.</p>
+      <p class="lede" style="margin-top:18px">Choose the production plan, then check the pieces you want. The total updates as you go. When it looks right, book it in HoneyBook: choose the same package there, sign the agreement, and pay the deposit.</p>
     </div>
 
     <div class="builder">
@@ -343,8 +343,8 @@
         <p class="empty" id="empty">Choose a production plan and the series.</p>
         <p class="dep" id="auto" style="color:var(--sage-soft)"></p>
         <p class="dep" id="dep"></p>
-        <a class="btn" id="send" aria-disabled="true" href="#">Send my selection to Bryan</a>
-        <p class="small" style="color:#A2ABA3;margin:14px 0 0;font-size:12.5px">Opens an email with your picks filled in. Nothing is booked until you confirm.</p>
+        <a class="btn" id="send" href="https://lawsofacefilms.hbportal.co/flow/6af34249562de85b8532fc7a?hash=0f79026f443bcfce4044fdacb6a8b231" target="_blank" rel="noopener">Book in HoneyBook</a>
+        <p class="small" style="color:#A2ABA3;margin:14px 0 0;font-size:12.5px">Opens HoneyBook, where you choose your package, sign, and pay the deposit in one place. Building a custom mix? Reply to my email and I will set it up.</p>
       </aside>
     </div>
   </div>
@@ -358,11 +358,12 @@
       <h2>One interview. A whole library of content.</h2>
       <p class="lede" style="margin-top:18px">We are intentional on interview day, because every conversation can become more than one video. B-roll from the field brings each one to life. From the same interviews, we can build:</p>
     </div>
-    <div class="yield">
+    <div class="yield" style="margin-bottom:14px">
       <div class="y"><b>Vertical reels</b><span>40 to 60 seconds, made for the feed. The heart of this series.</span></div>
       <div class="y"><b>Full interviews</b><span>Each partner's complete story, in their own words.</span></div>
       <div class="y"><b>A series montage</b><span>Every organization together in one film, the way we built it for Gamechangers.</span></div>
     </div>
+    <p class="small" style="margin:0 0 clamp(40px,6vw,64px)">The series is built around the vertical reels. Full interviews and a series montage can be added and are quoted separately.</p>
     <p class="eyebrow" style="margin:0">Three recent examples of that approach</p>
 
     <article class="case">
@@ -509,9 +510,9 @@
       <h2>Getting the series started</h2>
     </div>
     <ol class="steps">
-      <li>Pick a starting point above, or build your own and send the selection.</li>
-      <li>I confirm the scope and send a short agreement and invoice.</li>
-      <li>A 50% deposit reserves the December production dates. The balance is due when the reels are delivered.</li>
+      <li>Choose your package and click Book in HoneyBook.</li>
+      <li>Sign the agreement and pay the 50% deposit to reserve the December production dates.</li>
+      <li>The balance is due when the first reels are delivered in January.</li>
       <li>Share the partner list and your visit dates, and I handle the scheduling plan, the questions, and the rest.</li>
     </ol>
     <div class="sig">
@@ -567,12 +568,6 @@
     em.style.display=ok?'none':'block';
     em.textContent=!hasProd?'Choose a production plan to start.':'Add the community partner reels to complete the series.';
     document.getElementById('dep').textContent=ok?('Deposit to reserve the December dates: '+money(Math.round(total/2))):'';
-    var send=document.getElementById('send');
-    send.setAttribute('aria-disabled',ok?'false':'true');
-    var body='Hi Bryan,\n\nHere is what we would like for the Eastpoint Community Partner Series:\n\n'+
-      picked.map(function(i){return '- '+i.dataset.name+' ('+money(+i.dataset.price)+')'}).join('\n')+
-      '\n\nTotal: '+money(total)+'\n\nThanks,\nKristen';
-    send.href='mailto:lawsofacefilms@gmail.com?subject='+encodeURIComponent('Eastpoint Community Partner Series selection')+'&body='+encodeURIComponent(body);
   }
   inputs.forEach(function(i){i.addEventListener('change',update)});
   [].forEach.call(document.querySelectorAll('[data-preset]'),function(b){
